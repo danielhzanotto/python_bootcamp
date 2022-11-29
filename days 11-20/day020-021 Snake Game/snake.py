@@ -7,6 +7,7 @@ DOWN = 270
 LEFT = 180
 RIGHT = 0
 
+
 class Snake:
     def __init__(self):
 
@@ -50,3 +51,11 @@ class Snake:
             self.snake[seg].goto(self.snake[seg - 1].pos())
 
         self.head.forward(DISTANCE)
+
+    def grow(self):
+        piece = Turtle()
+        piece.shape("square")
+        piece.penup()
+        piece.color("white")
+        piece.goto(self.snake[len(self.snake)-1].pos())
+        self.snake.append(piece)
