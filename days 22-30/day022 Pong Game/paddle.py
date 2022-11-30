@@ -1,43 +1,24 @@
 from turtle import Turtle, Screen
-
 screen = Screen()
 
-POSITION = [(0, -20), (0, 0), (0, 20)]
 
-
-class Paddle():
-    def __init__(self):
-        self.paddle = []
+class Paddle(Turtle):
+    def __init__(self, position):
+        super().__init__()
+        self.color("white")
+        self.penup()
+        self.shape("square")
+        self.shapesize(stretch_wid=3, stretch_len=1)
+        self.setx(position)
         self.direction = "up"
 
-    def create_paddle(self):
-        for r in range(0, 3):
-            piece = Turtle()
-            piece.color("white")
-            piece.penup()
-            piece.shape("square")
-            piece.goto(POSITION[r])
-            self.paddle.append(piece)
-
-    def create_player_1(self):
-        self.create_paddle()
-        for piece in self.paddle:
-            piece.setx(-470)
-
-    def create_player_2(self):
-        self.create_paddle()
-        for piece in self.paddle:
-            piece.setx(470)
-
     def up(self):
-        if self.paddle[2].ycor() < 280:
-            for piece in self.paddle:
-                piece.sety(piece.ycor() + 20)
+        if self.ycor() < 270:
+            self.sety(self.ycor() + 20)
 
     def down(self):
-        if self.paddle[0].ycor() > -280:
-            for piece in self.paddle:
-                piece.sety(piece.ycor() - 20)
+        if self.ycor() > -270:
+            self.sety(self.ycor() - 20)
 
     def control_player_1(self):
         screen.listen()
@@ -57,7 +38,7 @@ class Paddle():
             return self.down()
 
     def pc_directions(self):
-        if self.paddle[2].ycor() >= 280:
+        if self.ycor() >= 270:
             self.direction = "down"
-        elif self.paddle[0].ycor() <= -280:
+        elif self.ycor() <= -270:
             self.direction = "up"

@@ -14,11 +14,8 @@ screen.tracer(0)
 scoreboard = Score()
 ball = Ball()
 
-player = Paddle()
-player.create_player_1()
-
-pc = Paddle()
-pc.create_player_2()
+player = Paddle(-470)
+pc = Paddle(470)
 
 is_on = True
 while is_on:

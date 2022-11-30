@@ -32,27 +32,20 @@ class Ball(Turtle):
         elif self.ycor() == -280:
             self.direction[0] = 0
 
-        for piece in player_1.paddle:
-            if piece.distance(self) <= 10:
-                self.direction[1] = 0
-        for piece in player_2.paddle:
-            if piece.distance(self) <= 10:
-                self.direction[1] = 1
+        if player_1.distance(self) <= 30 and self.xcor() <= -460:
+            self.direction[1] = 0
+        if player_2.distance(self) <= 30 and self.xcor() >= 460:
+            self.direction[1] = 1
 
-        if self.xcor() == 490:
-            self.direction[0] = 2
-            self.direction[1] = 2
-        elif self.xcor() == -490:
+        if self.xcor() == 490 or self.xcor() == -490:
             self.direction[0] = 2
             self.direction[1] = 2
 
     def ball_move(self):
-
         if self.direction[0] == 0:
             self.north()
         elif self.direction[0] == 1:
             self.south()
-
         if self.direction[1] == 0:
             self.east()
         elif self.direction[1] == 1:
