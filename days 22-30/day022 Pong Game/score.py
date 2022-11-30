@@ -35,12 +35,15 @@ class Score(Turtle):
         if ball.xcor() >= 490:
             self.score[0] += 1
             ball.goto(0, 0)
+            ball.velocity = 0.1
             time.sleep(1)
         if ball.xcor() <= -490:
             self.score[1] += 1
             ball.goto(0, 0)
+            ball.velocity = 0.1
             time.sleep(.7)
         self.clear()
         self.update_scoreboard()
         if self.score[0] == 5 or self.score[1] == 5:
             self.win_game()
+            ball.velocity = 0.1

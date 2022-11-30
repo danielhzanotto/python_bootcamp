@@ -29,6 +29,6 @@ while is_on:
         is_on = False
 
     screen.update()
-    time.sleep(.05)
+    time.sleep(ball.velocity)
 
 screen.exitonclick()
