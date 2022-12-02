@@ -27,13 +27,15 @@ while is_on:
         scoreboard.increase_score()
 
     if (snake.head.xcor() >= screen.canvwidth / 2) or (snake.head.xcor() <= - screen.canvwidth / 2) or (snake.head.ycor() >= screen.canvheight / 2) or (snake.head.ycor() <= -screen.canvheight / 2):
-        is_on = False
-        scoreboard.game_over()
+        scoreboard.reset()
+        snake.reset()
+        time.sleep(0.7)
 
-    for pixel in range(2, len(snake.snake) - 1):
+    for pixel in range(1, len(snake.snake) - 1):
         if snake.snake[pixel].pos() == snake.head.pos():
-            is_on = False
-            scoreboard.game_over()
+            scoreboard.reset()
+            snake.reset()
+            time.sleep(0.7)
 
 
 screen.exitonclick()
