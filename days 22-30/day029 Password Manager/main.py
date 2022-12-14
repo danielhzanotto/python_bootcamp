@@ -2,6 +2,8 @@ from tkinter import *
 import random
 from characters import *
 from tkinter import messagebox
+import json
+
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
@@ -25,22 +27,59 @@ def pass_save():
     site_name = site_input.get()
     email_name = email_input.get()
     new_pass = password_final.get()
+    new_data = {
+        site_name: {
+            "email": email_name,
+            "password": new_pass
+        }
+    }
 
     if len(site_name) == 0 or len(new_pass) == 0 or len(email_name) == 0:
         messagebox.showinfo(
             title="Oops", message="Please don't leave any fields empty!")
     else:
-        pop_up = messagebox.askokcancel(
-            title=site_name, message=f"These are the details entered: \nEmail: {email_name} \nPassword: {new_pass} \nIs it ok to save?")
-        if pop_up:
-            with open("/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day029 Password Manager/password_man.csv", "a") as f:
-                f.write(f"\n{site_name}, {email_name}, {new_pass}")
-                email_input.delete(0, END)
-                site_input.delete(0, END)
-                password_final.delete(0, END)
+        try:
+            with open("/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day029 Password Manager/password_man.json", "r") as data:
+                # reading old data
+                pass_data = json.load(data)
+        except FileNotFoundError:
+            with open("/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day029 Password Manager/password_man.json", "w") as data:
+                json.dump(new_data, data, indent=4)
+        else:
+            # updating with new data
+            pass_data.update(new_data)
+            with open("/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day029 Password Manager/password_man.json", "w") as data:
+                # saving uptate data
+                json.dump(pass_data, data, indent=4)
+        finally:
+            email_input.delete(0, END)
+            site_input.delete(0, END)
+            password_final.delete(0, END)
+
+
+# ---------------------------- SEARCH SITE ------------------------------- #
+
+
+def search_site():
+    site_name = site_input.get()
+    try:
+        with open("/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day029 Password Manager/password_man.json", "r") as data:
+            # reading old data
+            pass_data = json.load(data)
+            site_dict = pass_data[site_name]
+    except FileNotFoundError:
+        messagebox.showinfo(
+            title="Oops", message="There is no recorded passwords!")
+    except KeyError as not_found:
+        messagebox.showinfo(
+            title="Oops", message=f"We found no passwords for {not_found}!")
+    else:
+        messagebox.showinfo(
+            title=site_name, message=f"Email: {site_dict['email']} \nPassword: {site_dict['password']}")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
+
 
 window = Tk()
 window.title("Password Manager")
@@ -56,15 +95,19 @@ site_label = Label(text="Site: ", font=(
     "courier", 14), bg="white", padx=10, pady=10, anchor=W)
 site_label.grid(row=1, column=0)
 
-site_input = Entry(width=30, font=("courier", 14))
-site_input.grid(row=1, column=1, columnspan=2)
+site_input = Entry(width=20, font=("courier", 14))
+site_input.grid(row=1, column=1)
 site_input.get()
+
+search_button = Button(text="Search",
+                       command=search_site, width=15)
+search_button.grid(row=1, column=2)
 
 email_label = Label(text="E-mail: ", font=(
     "courier", 14), bg="white", padx=10, pady=10)
 email_label.grid(row=2, column=0)
 
-email_input = Entry(width=30, font=("courier", 14))
+email_input = Entry(width=31, font=("courier", 14))
 email_input.grid(row=2, column=1, columnspan=2)
 email_input.get()
 
@@ -76,7 +119,7 @@ password_final = Entry(width=20, font=("courier", 14))
 password_final.grid(row=3, column=1)
 
 password_button = Button(text="Generate Password",
-                         command=pass_generator, justify=RIGHT)
+                         command=pass_generator, width=15)
 password_button.grid(row=3, column=2)
 
 password_save = Button(text="Save Password", command=pass_save, width=47)
