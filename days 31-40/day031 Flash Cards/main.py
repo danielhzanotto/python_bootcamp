@@ -78,8 +78,7 @@ def word_correct():
 
 
 def retrieve_words():
-    global words_dict
-    global words_list
+    global words_dict, words_list
 
     data = pandas.read_csv(
         "/Users/Daniel/Documents/Phyton Bootcamp/days 31-40/day031 Flash Cards/french_words.csv")
@@ -99,6 +98,7 @@ def retrieve_words():
 
 
 window = Tk()
+window.title("Flash French Cards")
 window.config(padx=20, pady=20, bg=BACKGROUND_COLOR)
 
 
@@ -112,9 +112,9 @@ wrong = PhotoImage(
     file="/Users/Daniel/Documents/Phyton Bootcamp/days 31-40/day031 Flash Cards/images/wrong.png")
 
 
-canvas_card = Canvas(height=550, width=820,
+canvas_card = Canvas(height=526, width=800,
                      bg=BACKGROUND_COLOR, highlightthickness=0)
-card = canvas_card.create_image(410, 275, image=card_front)
+card = canvas_card.create_image(400, 263, image=card_front)
 canvas_card.grid(row=0, column=0, rowspan=5, columnspan=3)
 
 
