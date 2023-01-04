@@ -1,7 +1,7 @@
 import pandas
 
 data = pandas.read_csv(
-    "/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day025 CSV and Pandas/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+    "days 22-30/day025 CSV and Pandas/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
 
 
 # print(data["Primary Fur Color"])
@@ -30,4 +30,4 @@ for squirrell in data["Primary Fur Color"]:
 fur_color_frame = pandas.DataFrame(fur_color_dict)
 
 fur_color_frame.to_csv(
-    "/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day025 CSV and Pandas/Squirrel Count.csv")
+    "days 22-30/day025 CSV and Pandas/Squirrel Count.csv")

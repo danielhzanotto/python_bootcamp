@@ -8,7 +8,7 @@ class Score(Turtle):
         self.penup()
         self.goto(0, 260)
         self.score = 0
-        with open("C:/Users/Daniel/Documents/Phyton Bootcamp/days 11-21/day020-021 Snake Game/score.txt") as data:
+        with open("days 11-21/day020-021 Snake Game/score.txt") as data:
             self.highest = int(data.read())
         self.update_scoreboard()
         self.hideturtle()
@@ -20,7 +20,7 @@ class Score(Turtle):
 
     def reset(self):
         if self.score > self.highest:
-            with open("C:/Users/Daniel/Documents/Phyton Bootcamp/days 11-21/day020-021 Snake Game/score.txt", mode="w") as data:
+            with open("days 11-21/day020-021 Snake Game/score.txt", mode="w") as data:
                 self.highest = self.score
                 data.write(f"{self.score}")
         self.score = 0

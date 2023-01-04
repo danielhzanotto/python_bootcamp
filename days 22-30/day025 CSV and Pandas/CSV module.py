@@ -11,7 +11,7 @@
 import csv
 
 temp = []
-with open("/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day025 CSV and Pandas/forecast.csv", "r") as d:
+with open("days 22-30/day025 CSV and Pandas/forecast.csv", "r") as d:
     data = csv.reader(d)
     for row in data:
         print(row)

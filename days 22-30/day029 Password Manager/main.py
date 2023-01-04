@@ -39,16 +39,16 @@ def pass_save():
             title="Oops", message="Please don't leave any fields empty!")
     else:
         try:
-            with open("/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day029 Password Manager/password_man.json", "r") as data:
+            with open("days 22-30/day029 Password Manager/password_man.json", "r") as data:
                 # reading old data
                 pass_data = json.load(data)
         except FileNotFoundError:
-            with open("/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day029 Password Manager/password_man.json", "w") as data:
+            with open("days 22-30/day029 Password Manager/password_man.json", "w") as data:
                 json.dump(new_data, data, indent=4)
         else:
             # updating with new data
             pass_data.update(new_data)
-            with open("/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day029 Password Manager/password_man.json", "w") as data:
+            with open("days 22-30/day029 Password Manager/password_man.json", "w") as data:
                 # saving uptate data
                 json.dump(pass_data, data, indent=4)
         finally:
@@ -63,7 +63,7 @@ def pass_save():
 def search_site():
     site_name = site_input.get()
     try:
-        with open("/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day029 Password Manager/password_man.json", "r") as data:
+        with open("days 22-30/day029 Password Manager/password_man.json", "r") as data:
             # reading old data
             pass_data = json.load(data)
             site_dict = pass_data[site_name]
@@ -87,7 +87,7 @@ window.config(padx=20, pady=20, bg="white")
 
 canvas = Canvas(height=200, width=200, bg="white", highlightthickness=0)
 locker_img = PhotoImage(
-    file="/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day029 Password Manager/logo.png")
+    file="days 22-30/day029 Password Manager/logo.png")
 canvas.create_image(100, 100, image=locker_img)
 canvas.grid(row=0, column=1)
 
