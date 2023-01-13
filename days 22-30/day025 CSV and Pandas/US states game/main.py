@@ -3,12 +3,12 @@ import pandas
 
 screen = turtle.Screen()
 screen.title("US Names Game")
-image = "/Users/Daniel/Documents/Phyton Bootcamp/days 22-30/day025 CSV and Pandas/US states game/blank_states_img.gif"
+image = "US states game/blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
 
 data = pandas.read_csv(
-    "days 22-30/day025 CSV and Pandas/US states game/50_states.csv")
+    "US states game/50_states.csv")
 
 
 def print_state(x, y, state):

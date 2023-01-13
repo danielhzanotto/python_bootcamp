@@ -1,7 +1,7 @@
 import pandas
 
 data = pandas.read_csv(
-    "days 22-30/day025 CSV and Pandas/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+    "2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
 
 
 # print(data["Primary Fur Color"])

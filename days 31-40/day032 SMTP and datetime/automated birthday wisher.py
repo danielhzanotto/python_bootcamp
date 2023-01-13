@@ -16,7 +16,7 @@ now = dt.datetime.now()
 day = now.day
 month = now.month
 
-friends_list = pd.read_csv("days 31-40/day032 Birthday email/birthdays.csv")
+friends_list = pd.read_csv("birthdays.csv")
 
 friends_dict = friends_list.to_dict("records")
 
@@ -26,7 +26,7 @@ for friend in friends_dict:
 
         random_letter = random.randint(1, 3)
 
-        with open(f"days 31-40/day032 Birthday email/letter_templates/letter_{random_letter}.txt") as dt:
+        with open(f"letter_templates/letter_{random_letter}.txt") as dt:
             letter = dt.read()
             new_letter = letter.replace("[NAME]", friend_of_the_day["name"])
             print(new_letter)

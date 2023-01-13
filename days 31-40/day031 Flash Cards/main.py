@@ -15,12 +15,12 @@ word_french = None
 
 try:
     words_data = pandas.read_csv(
-        "days 31-40/day031 Flash Cards/remaining_words.csv")
+        "remaining_words.csv")
 except FileNotFoundError:
     words_data = pandas.read_csv(
-        "days 31-40/day031 Flash Cards/french_words.csv")
+        "french_words.csv")
     words_data.to_csv(
-        "days 31-40/day031 Flash Cards/remaining_words.csv")
+        "remaining_words.csv")
 
 words_dict = {}
 for index, row in words_data.iterrows():
@@ -69,7 +69,7 @@ def word_correct():
     print(len(words_dict))
     df = pandas.DataFrame(words_dict.items(), columns=languages)
     df.to_csv(
-        "days 31-40/day031 Flash Cards/remaining_words.csv")
+        "remaining_words.csv")
 
     select_word()
 
@@ -81,9 +81,9 @@ def retrieve_words():
     global words_dict, words_list
 
     data = pandas.read_csv(
-        "days 31-40/day031 Flash Cards/french_words.csv")
+        "french_words.csv")
     data.to_csv(
-        "days 31-40/day031 Flash Cards/remaining_words.csv")
+        "remaining_words.csv")
 
     words_dict = {}
     for index, row in data.iterrows():
@@ -103,13 +103,13 @@ window.config(padx=20, pady=20, bg=BACKGROUND_COLOR)
 
 
 card_front = PhotoImage(
-    file="days 31-40/day031 Flash Cards/images/card_front.png")
+    file="images/card_front.png")
 card_back = PhotoImage(
-    file="days 31-40/day031 Flash Cards/images/card_back.png")
+    file="images/card_back.png")
 right = PhotoImage(
-    file="days 31-40/day031 Flash Cards/images/right.png")
+    file="images/right.png")
 wrong = PhotoImage(
-    file="days 31-40/day031 Flash Cards/images/wrong.png")
+    file="images/wrong.png")
 
 
 canvas_card = Canvas(height=526, width=800,

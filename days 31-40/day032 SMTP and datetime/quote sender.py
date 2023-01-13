@@ -10,7 +10,7 @@ now = dt.datetime.now()
 weekday = now.weekday()
 
 if weekday == 0:
-    with open("days 31-40/day032 Birthday email/quotes.txt") as quote_file:
+    with open("quotes.txt") as quote_file:
         all_quotes = quote_file.readlines()
         quote = random.choice(all_quotes)
 

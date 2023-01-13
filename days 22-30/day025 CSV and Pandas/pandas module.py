@@ -1,7 +1,7 @@
 import pandas
 
 data = pandas.read_csv(
-    "days 22-30/day025 CSV and Pandas/forecast.csv")
+    "forecast.csv")
 # print(data["temp"])
 
 
@@ -42,4 +42,4 @@ data_dict = {
 data_frame = pandas.DataFrame(data_dict)
 print(data_frame)
 data_frame.to_csv(
-    "days 22-30/day025 CSV and Pandas/new_data.csv")
+    "new_data.csv")
