@@ -4,7 +4,7 @@ import smtplib
 
 
 OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
-API_KEY = "2a5fdffccadd15590307fd242761cc01"
+API_KEY = "sdfdfgzdfbvdzbvf "
 
 my_email = "mmegaterio@gmail.com"
 password = "zkyhcquwdplsxzkj"
