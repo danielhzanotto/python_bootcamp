@@ -3,7 +3,7 @@ from datetime import datetime as dt
 
 
 USERNAME = "megateriomega"
-TOKEN = "sdfbgsbnsbhzsdgbn"
+TOKEN = "!s3cretserviceiswatching!"
 ID = "graph1"
 PIXELA_ENDPOINT = "https://pixe.la/v1/users"
 today = dt.now().strftime("%Y%m%d")
