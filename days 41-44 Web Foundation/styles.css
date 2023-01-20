@@ -1,8 +1,8 @@
 /* 
-#F8EDE3
-#BDD2B6
-#A2B29F
-#798777 
+#FCF8EC
+#D0E8F2
+#79A3B1
+#456268 
 */
 
 * {
@@ -11,10 +11,58 @@
 }
 
 body {
-  background-color: #f8ede3;
+  background-color: #d0e8f2;
+  font-family: "century gothic", sans-serif;
 }
 
 .presentation {
   text-align: center;
-  color: #798777;
+  color: #456268;
+  margin: auto;
+}
+
+#name {
+  margin-bottom: 10px;
+}
+
+#name-1 {
+  font-weight: 600;
+  font-size: 3em;
+}
+
+#name-2 {
+  font-weight: 100;
+  font-size: 1.5em;
+}
+
+#cloud-top {
+  margin: 40px 0px 30px 300px;
+}
+
+#cloud-bottom {
+  position: absolute;
+}
+
+#mountain-image {
+  position: relative;
+  bottom: 0px;
+}
+
+.passaro {
+  margin: 50px auto;
+  width: 50%;
+}
+
+.img-passaro {
+  width: 25%;
+  border-radius: 50%;
+  float: left;
+  margin: 0 30px;
+}
+
+.img-chillies {
+  width: 25%;
+  border-radius: 50%;
+  float: right;
+  margin: 0 30px;
 }
