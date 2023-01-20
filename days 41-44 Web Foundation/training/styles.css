@@ -1,0 +1,41 @@
+/* 
+#94B49F
+#CEE5D0
+#FAFDD6
+#ecb390
+*/
+
+body {
+  background-color: ivory;
+}
+
+header {
+  text-align: center;
+}
+
+hr {
+  border-style: dotted none none;
+  border-color: #ecb390;
+  border-width: 10px;
+  width: 25%;
+}
+
+#thumbimage {
+  border-radius: 50%;
+}
+
+.main-name {
+  color: #a2b38b;
+}
+
+#title-broccoli {
+  color: green;
+}
+
+.text-broccoli {
+  color: green;
+}
+
+#img-broccoli {
+  background-color: green;
+}

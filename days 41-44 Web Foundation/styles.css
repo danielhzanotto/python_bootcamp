@@ -1,0 +1,20 @@
+/* 
+#F8EDE3
+#BDD2B6
+#A2B29F
+#798777 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f8ede3;
+}
+
+.presentation {
+  text-align: center;
+  color: #798777;
+}
