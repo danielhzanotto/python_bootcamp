@@ -2799,8 +2799,10 @@ WebDriver BiDi listening on ws://127.0.0.1:54482
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Daniel\\AppData\\Local\\Temp\\rust_mozprofilezgV7rM\\search.json.mozlz4", (void 0)))
 DevTools listening on ws://127.0.0.1:54482/devtools/browser/b4eeee6e-e123-4e01-b9f4-9772b9522002
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
-1675975536101	geckodriver	INFO	Listening on 127.0.0.1:54557
-1675975539170	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54559" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Daniel\\AppData\\Local\\Temp\\rust_mozprofileY0jQow"
+1675977024123	Marionette	INFO	Stopped listening on port 54491
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+e-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Daniel\\AppData\\Local\\Temp\\rust_mozprofileY0jQow"
 1675975539640	Marionette	INFO	Marionette enabled
 Dynamically enable window occlusion 0
 1675975539648	Marionette	INFO	Listening on port 54567
@@ -2820,10 +2822,10 @@ WebDriver BiDi listening on ws://127.0.0.1:54639
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Daniel\\AppData\\Local\\Temp\\rust_mozprofileCKipDh\\search.json.mozlz4", (void 0)))
 DevTools listening on ws://127.0.0.1:54639/devtools/browser/796e2407-dfda-4f2b-96e3-44e68a59a520
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
-ules/TelemetryArchive.jsm:103:5
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
-_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
-send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
+1675977024652	Marionette	INFO	Stopped listening on port 54647
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+trollerParent.jsm:628:24
 submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
 sendPing@resource://gre/modules/EventPing.jsm:51:30
 _submitPing@resource://gre/modules/EventPing.jsm:229:12
