@@ -25,7 +25,7 @@
   </head>
 
   <body>
-    <section id="title">
+    <section id="title" class="colored-section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-md navbar-dark">
           <div class="container">
@@ -47,21 +47,21 @@
                 style="--bs-scroll-height: 100px"
               >
                 <li class="nav-item">
-                  <a href="" class="nav-link">Contact</a>
+                  <a href="#footer" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link">Pricing</a>
+                  <a href="#pricing" class="nav-link">Pricing</a>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link">Download</a>
+                  <a href="#cta" class="nav-link">Download</a>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
         <div class="row">
-          <div class="col-md-6">
-            <h1>Meet new and interesting dogs nearby.</h1>
+          <div class="col-md-6 main-header">
+            <h1 class="big-heading">Meet new and interesting dogs nearby.</h1>
             <button class="btn btn-dark btn-lg btn-download" type="button">
               <i class="fa-brands fa-apple"></i>
               Download
@@ -87,19 +87,19 @@
 
     <!-- Features -->
 
-    <section id="features" class="row">
+    <section id="features" class="row container-fluid white-section">
       <div class="col-lg-4 feature-box">
-        <i class="feature-icons fa-solid fa-circle-check"></i>
+        <i class="icons feature-icons fa-solid fa-circle-check"></i>
         <h3>Easy to use.</h3>
         <p>So easy to use, even your dog could do it.</p>
       </div>
       <div class="col-lg-4 feature-box">
-        <i class="feature-icons fa-solid fa-bullseye"></i>
+        <i class="icons feature-icons fa-solid fa-bullseye"></i>
         <h3>Elite Clientele</h3>
         <p>We have all the dogs, the greatest dogs.</p>
       </div>
       <div class="col-lg-4 feature-box">
-        <i class="feature-icons fa-solid fa-heart"></i>
+        <i class="icons feature-icons fa-solid fa-heart"></i>
         <h3>Guaranteed to work.</h3>
         <p>Find the love of your dog's life or your money back.</p>
       </div>
@@ -107,15 +107,15 @@
 
     <!-- Testimonials -->
 
-    <section id="testimonials">
+    <section id="testimonials" class="colored-section">
       <div
         id="testimonial-carousel"
         class="carousel slide"
         data-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <h2>
+          <div class="carousel-item active container-fluid">
+            <h2 class="testimonial-text">
               I no longer have to sniff other dogs for love. I've found the
               hottest Corgi on TinDog. Woof.
             </h2>
@@ -162,7 +162,7 @@
 
     <!-- Press -->
 
-    <section id="press">
+    <section id="press" class="colored-section">
       <img class="press-logo" src="images/techcrunch.png" alt="tc-logo" />
       <img class="press-logo" src="images/tnw.png" alt="tnw-logo" />
       <img
@@ -175,7 +175,7 @@
 
     <!-- Pricing -->
 
-    <section id="pricing">
+    <section id="pricing" class="white-section">
       <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h2>A Plan for Every Dog's Needs</h2>
         <p>Simple and affordable price plans for your and your dog.</p>
@@ -188,7 +188,7 @@
               <h3>Chihuahua</h3>
             </div>
             <div class="card-body">
-              <h2>Free</h2>
+              <h2 class="price-text">Free</h2>
               <p>5 Matches Per Day</p>
               <p>10 Messages Per Day</p>
               <p>Unlimited App Usage</p>
@@ -204,7 +204,7 @@
               <h3>Labrador</h3>
             </div>
             <div class="card-body">
-              <h2>$49 / mo</h2>
+              <h2 class="price-text">$49 / mo</h2>
               <p>Unlimited Matches</p>
               <p>Unlimited Messages</p>
               <p>Unlimited App Usage</p>
@@ -220,7 +220,7 @@
               <h3>Mastiff</h3>
             </div>
             <div class="card-body">
-              <h2>$99 / mo</h2>
+              <h2 class="price-text">$99 / mo</h2>
               <p>Pirority Listing</p>
               <p>Unlimited Matches</p>
               <p>Unlimited Messages</p>
@@ -236,15 +236,25 @@
 
     <!-- Call to Action -->
 
-    <section id="cta">
-      <h3>Find the True Love of Your Dog's Life Today.</h3>
-      <button type="button">Download</button>
-      <button type="button">Download</button>
+    <section id="cta" class="container-fluid colored-section">
+      <h3 class="big-heading">Find the True Love of Your Dog's Life Today.</h3>
+      <button class="btn btn-dark btn-lg btn-download" type="button">
+        <i class="fa-brands fa-apple"></i>
+        Download
+      </button>
+      <button class="btn btn-outline-light btn-lg btn-download" type="button">
+        <i class="fa-brands fa-google-play"></i>
+        Download
+      </button>
     </section>
 
     <!-- Footer -->
 
-    <footer id="footer">
+    <footer id="footer" class="container-fluid white-section">
+      <i class="icons social-icon fa-brands fa-facebook"></i>
+      <i class="icons social-icon fa-brands fa-twitter"></i>
+      <i class="icons social-icon fa-brands fa-instagram"></i>
+      <i class="icons social-icon fa-solid fa-envelope"></i>
       <p>© Copyright 2023 TinDog</p>
     </footer>
     <script
