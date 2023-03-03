@@ -1,0 +1,20 @@
+{% extends 'bootstrap/base.html' %} {% import "bootstrap/wtf.html" as wtf %} {%
+block styles %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/styles.css') }}"
+/>
+{% endblock %} {% block title %}Add Catalog{% endblock %} {% block content %}
+<h1>My Library</h1>
+{% if books |length == 0 %}
+<p>The Library is Empty</p>
+{%else%}
+<ul>
+  {% for book in books %}
+  <li>{{book['title']}}: {{book['author']}} ({{book['rating']}}/5)</li>
+  {% endfor %}
+</ul>
+{%endif%}
+<a href="{{url_for('add')}}">Add New Book</a>
+
+{% endblock %}
