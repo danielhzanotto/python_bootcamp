@@ -1,5 +1,10 @@
-{% extends 'bootstrap/base.html' %} {% block title %}Restaurants{% endblock %}
-{% block content %}
+{% extends 'bootstrap/base.html' %} {% import "bootstrap/wtf.html" as wtf %} {%
+block styles %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/styles.css') }}"
+/>
+{% endblock %} {% block title %}Restaurants{% endblock %} {% block content %}
 
 <div class="container">
   <div class="row">
